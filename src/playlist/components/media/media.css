@@ -1,0 +1,27 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, .2);
+    display: inline-block;
+    margin: 16px;
+    max-width: 250px;
+    overflow: hidden;
+    width: 25%;
+  }
+  .card__img {
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card__info {
+    padding: 16px;
+  }
+  .card__info h3 {
+    margin: 0 0 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .card__info p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
