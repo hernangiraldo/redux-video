@@ -1,6 +1,7 @@
 import React from 'react';
 import Play from '../../icons/play';
 import Pause from '../../icons/pause';
+import './play-pause.css'
 
 const PlayPause = ({handleClick, pause}) => (
     <div className="PlayPause">

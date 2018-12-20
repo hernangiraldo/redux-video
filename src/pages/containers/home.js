@@ -12,10 +12,17 @@ class Home extends Component {
         modalVisible: false
     }
 
-    handleToggleModal = (event) => {
-        this.setState({
-            modalVisible: !this.state.modalVisible
-        })
+    handleToggleModal = (media) => {
+        if (!this.state.modalVisible) {
+            this.setState({
+                modalVisible: true,
+                media
+            })
+        } else {
+            this.setState({
+                modalVisible: false
+            })
+        }
     }
 
     render() {
@@ -23,13 +30,12 @@ class Home extends Component {
             <HandleError>
                 <HomeLayout>
                     <Related />
-                    <VideoPlayer autoplay={true} />
                     <Categories categories={this.props.data.categories} handleToggleModal={this.handleToggleModal} />
                     {
                         this.state.modalVisible &&
                         <ModalContainer>
                             <Modal handleClick={this.handleToggleModal}>
-                                <h1>Modal</h1>
+                                <VideoPlayer autoplay={true} title={this.state.media.title} src={this.state.media.src} />
                             </Modal>
                         </ModalContainer>
                     }

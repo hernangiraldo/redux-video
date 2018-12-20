@@ -8,7 +8,7 @@ export default function Playlist(props) {
     <div className="Playlist">
       {
         props.playlist.map( m => {
-          return <Media {...m} key={m.id} handleClick={props.handleClick}/>
+          return <Media {...m} key={m.id} openModal={props.handleClick}/>
         })
       }
     </div>
