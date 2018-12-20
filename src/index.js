@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './entries/home'
+import Home from './pages/containers/home'
 
 const app = document.getElementById('root');
 

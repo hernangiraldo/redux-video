@@ -8,15 +8,9 @@ export default class Media extends Component {
     title: this.props.title
   };
 
-  handleClick = (event) => {
-    this.setState({
-      title: 'Pruebas'
-    });
-  }
-
   render() {
     return (
-      <div className="card">
+      <div className="card" onClick={this.props.handleClick}>
         <img className="card__img" src={this.props.cover} alt="course" />
         <div className="card__info">
           <h3>{this.props.title}</h3>

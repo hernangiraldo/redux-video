@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Home from '../pages/containers/home';
+import data from '../api.json'
 
-class Home extends Component {
-    render() {
-        return(
-            <div></div>
-        )
-    }
-}
+const homeContainer = document.getElementById('home-container');
 
-export default Home;
+ReactDOM.render(<Home data={data} />, homeContainer);
